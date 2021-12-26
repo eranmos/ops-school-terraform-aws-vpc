@@ -106,7 +106,7 @@ resource "aws_route" "public_internet_gateway" {
 
   route_table_id         = aws_route_table.public[0].id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = aws_internet_gateway.vpc_igw[0].id
+  gateway_id             = aws_internet_gateway.vpc_igw.id
 
   timeouts {
     create = "5m"
