@@ -52,3 +52,13 @@ output "igw_id" {
   description = "The ID of the Internet Gateway"
   value       = concat(aws_internet_gateway.vpc_igw.*.id, [""])[0]
 }
+
+output "azs" {
+  description = "A list of availability zones specified as argument to this module"
+  value       = var.azs
+}
+
+output "name" {
+  description = "The name of the VPC specified as argument to this module"
+  value       = var.name
+}
